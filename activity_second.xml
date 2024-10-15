@@ -3,35 +3,43 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/azulcl">
+    android:layout_height="match_parent">
 
-    <!-- Imagen en la parte superior -->
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondoxd"
+        android:scaleType="centerCrop" />
+
+
     <ImageView
         android:id="@+id/imglog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/imglog"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:contentDescription="@string/imglog"
-    android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/imglog"
+        android:layout_marginTop="16dp" />
 
-    <!-- Campo de usuario -->
+
+
     <EditText
         android:id="@+id/editTextUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="324dp"
+        android:background="@android:drawable/edit_text"
         android:hint="Usuario"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/imglog"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:background="@android:drawable/edit_text" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imglog" />
 
-    <!-- Campo de contraseña -->
     <EditText
         android:id="@+id/editTextContrasena"
         android:layout_width="0dp"
@@ -45,7 +53,7 @@
         android:layout_marginTop="8dp"
         android:background="@android:drawable/edit_text" />
 
-    <!-- Texto seleccionable para olvidar contraseña -->
+
     <TextView
         android:id="@+id/textOlvidasteContrasena"
         android:layout_width="wrap_content"
@@ -60,13 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/background_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/fondoxd"
-    android:scaleType="centerCrop" />
-
     <Button
         android:id="@+id/boton_comenzar"
         android:layout_width="wrap_content"
@@ -74,11 +75,11 @@
         android:background="@color/verdecl"
         android:text="Comenzar"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/textOlvidasteContrasena"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toBottomOf="@id/textOlvidasteContrasena"
+        app:layout_constraintVertical_bias="0.338" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
