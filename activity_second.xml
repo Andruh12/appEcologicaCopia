@@ -60,6 +60,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondoxd"
+    android:scaleType="centerCrop" />
+
     <Button
         android:id="@+id/boton_comenzar"
         android:layout_width="wrap_content"
