@@ -8,6 +8,12 @@
     android:background="@color/azulcl">
 
     <!-- Título en la parte superior -->
+        <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondoxd"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/textTitulo"
