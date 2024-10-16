@@ -18,20 +18,19 @@
         android:id="@+id/imglog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/imglog"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
         android:contentDescription="@string/imglog"
-        android:layout_marginTop="16dp" />
-
-
+        android:src="@drawable/imglog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="16dp"
         android:background="@android:drawable/edit_text"
         android:hint="Usuario"
         android:padding="10dp"
@@ -58,7 +57,7 @@
         android:id="@+id/textOlvidasteContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Olvidaste tu contraseña?"
+        android:text="¿No te has registrado?"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
