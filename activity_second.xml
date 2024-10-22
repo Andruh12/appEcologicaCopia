@@ -73,7 +73,7 @@
         android:id="@+id/boton_comenzar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/verdecl"
+        android:backgroundtint="@color/verdecl"
         android:text="Comenzar"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
