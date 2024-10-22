@@ -26,6 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/editTextUsuario"
         android:layout_width="0dp"
@@ -67,6 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+   <com.google.android.material.button.MaterialButton> 
     <Button
         android:id="@+id/boton_comenzar"
         android:layout_width="wrap_content"
