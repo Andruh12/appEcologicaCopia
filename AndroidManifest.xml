@@ -25,7 +25,17 @@
         <activity
             android:name=".SecondActivity"
             android:exported="true" />
+        </activity>
 
+        <activity
+            android:name=".ThreeActivity"
+            android:exported="true" />
+        </activity>
+
+        <activity
+            android:name=".FourActivity"
+            android:exported="true" />
+        </activity>
     </application>
 
 </manifest>
