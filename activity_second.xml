@@ -26,38 +26,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
         android:id="@+id/editTextUsuario"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/corner" 
-    android:hint="Usuario"
-    android:padding="10dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/imglog" />
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/corner"
+        android:hint="Usuario"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imglog" />
 
     <EditText
         android:id="@+id/editTextContrasena"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@drawable/corner"
         android:hint="Contraseña"
         android:padding="10dp"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/editTextUsuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/edit_text" />
+        android:layout_marginTop="8dp" />
 
 
     <TextView
         android:id="@+id/textOlvidasteContrasena"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="¿No te has registrado?"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="16sp"
