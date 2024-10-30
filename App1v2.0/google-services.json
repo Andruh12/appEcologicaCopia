@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "119053347104",
+    "project_id": "ecoshopfriend-42794",
+    "storage_bucket": "ecoshopfriend-42794.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119053347104:android:339c52b42cdcb9d1cacf45",
+        "android_client_info": {
+          "package_name": "com.example.app1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_dIr7pBi1StxhoIqTRDnt8He5tgdbvqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
