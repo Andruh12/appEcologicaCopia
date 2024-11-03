@@ -1,0 +1,57 @@
+package com.example.app1
+
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+data class Product(val name: String, val price: Double)
+
+class ThreeActivity : AppCompatActivity() {
+    private val products = listOf(
+        Product("Tenis Ecológicos", 10.00),
+        Product("Camisa Ecológica", 12.00),
+        Product("Gorra Ecológica", 15.00),
+        Product("Pantaloneta Ecológica", 20.00)
+    )
+
+    private val cart = mutableListOf<Product>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_three)
+
+        // Aquí puedes inicializar tu UI si es necesario
+    }
+
+    fun onShoppingCartClick(view: View) {
+        val cartItems = cart.joinToString(", ") { "${it.name} - $${it.price}" }
+        if (cart.isEmpty()) {
+            Toast.makeText(this, "El carrito está vacío", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Carrito: $cartItems", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun onAddToCartClick(view: View) {
+        // Determinar qué producto se agregó basado en la vista
+        val parent = view.parent as LinearLayout
+        val productName = (parent.getChildAt(1) as TextView).text.toString()
+        val productPrice = when (productName) {
+            "Tenis Ecológicos\n$10.00" -> products[0]
+            "Camisa Ecológica\n$12.00" -> products[1]
+            "Gorra Ecológica\n$15.00" -> products[2]
+            "Pantaloneta Ecológica\n$20.00" -> products[3]
+            else -> null
+        }
+
+        productPrice?.let {
+            cart.add(it)
+            Toast.makeText(this, "${it.name} agregado al carrito", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
