@@ -1,57 +1,150 @@
-package com.example.app1
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoxd" />
 
-data class Product(val name: String, val price: Double)
+    <ImageView
+        android:id="@+id/shopping_cart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/carrito"
+        android:onClick="onShoppingCartClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintMarginEnd="16dp" />
 
-class ThreeActivity : AppCompatActivity() {
-    private val products = listOf(
-        Product("Tenis Ecológicos", 10.00),
-        Product("Camisa Ecológica", 12.00),
-        Product("Gorra Ecológica", 15.00),
-        Product("Pantaloneta Ecológica", 20.00)
-    )
+    <LinearLayout
+        android:id="@+id/products_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    private val cart = mutableListOf<Product>()
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_three)
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
 
-        // Aquí puedes inicializar tu UI si es necesario
-    }
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/tenis" />
 
-    fun onShoppingCartClick(view: View) {
-        val cartItems = cart.joinToString(", ") { "${it.name} - $${it.price}" }
-        if (cart.isEmpty()) {
-            Toast.makeText(this, "El carrito está vacío", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "Carrito: $cartItems", Toast.LENGTH_LONG).show()
-        }
-    }
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:text="Tenis Ecologicos\n$10.00"
+                    android:textColor="#FFFFFF" />
 
-    fun onAddToCartClick(view: View) {
-        // Determinar qué producto se agregó basado en la vista
-        val parent = view.parent as LinearLayout
-        val productName = (parent.getChildAt(1) as TextView).text.toString()
-        val productPrice = when (productName) {
-            "Tenis Ecológicos\n$10.00" -> products[0]
-            "Camisa Ecológica\n$12.00" -> products[1]
-            "Gorra Ecológica\n$15.00" -> products[2]
-            "Pantaloneta Ecológica\n$20.00" -> products[3]
-            else -> null
-        }
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:onClick="onAddToCartClick" />
+            </LinearLayout>
 
-        productPrice?.let {
-            cart.add(it)
-            Toast.makeText(this, "${it.name} agregado al carrito", Toast.LENGTH_SHORT).show()
-        }
-    }
-}
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/camisa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:text="Camisa Ecologica\n$12.00"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:onClick="onAddToCartClick" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/gorra" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:text="Gorra Ecologica\n$15.00"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:onClick="onAddToCartClick" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/pantaloneta" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#80000000"
+                    android:gravity="center"
+                    android:text="Pantaloneta Ecologica\n$20.00"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar"
+                    android:onClick="onAddToCartClick" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
