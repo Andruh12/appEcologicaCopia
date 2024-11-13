@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/azulcl">
 
-
+    <!-- Fondo de la imagen -->
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="match_parent"
@@ -15,6 +15,7 @@
         android:src="@drawable/fondoxd"
         android:scaleType="centerCrop" />
 
+    <!-- Título del Splash Screen -->
     <TextView
         android:id="@+id/textTitulo"
         android:layout_width="wrap_content"
@@ -30,30 +31,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <!-- Logo en el centro del Splash Screen -->
     <ImageView
         android:id="@+id/imgprincipal"
         android:layout_width="500dp"
         android:layout_height="400dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/imgprincipal"
-        app:layout_constraintBottom_toTopOf="@+id/boton_inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textTitulo" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/boton_inicio"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginBottom="32dp"
-        android:text="Comenzar"
-        android:backgroundTint="@color/verdecl"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgprincipal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
